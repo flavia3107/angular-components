@@ -9,6 +9,8 @@ import { Component, computed, EventEmitter, input, output, Output } from '@angul
 })
 export class UserComponent {
   user = input.required<{ avatar: string, name: string, id: string }>();
+  selected = input.required<boolean>();
+
   imagePath = computed(() => `assets/users/${this.user().avatar}`);
   onUserClick = output<string>();
 

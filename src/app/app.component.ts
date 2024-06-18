@@ -15,8 +15,10 @@ import { UserComponent } from './user/user.component';
 export class AppComponent {
   users = DUMMY_USERS;
   user: { id: string; name: string; avatar: string; } | undefined;
+  selectedId: string = '';
 
   onSelectUser(id: string) {
     this.user = DUMMY_USERS.find(user => user.id === id);
+    this.selectedId = id;
   }
 }
