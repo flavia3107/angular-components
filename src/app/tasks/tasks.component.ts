@@ -17,4 +17,8 @@ export class TasksComponent {
   ngOnChanges() {
     this.userTasks = dummyTasks.filter((task: Task) => task.userId === this.user().id);
   }
+
+  updateTask(id: string) {
+    this.userTasks = this.userTasks.filter(task => task.id !== id);
+  }
 }
