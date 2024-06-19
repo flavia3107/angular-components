@@ -1,5 +1,5 @@
 import { Component, input } from '@angular/core';
-import { dummyTasks, Task } from './dummy-tasks';
+import { dummyTasks, Task, TaskData } from './dummy-tasks';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { TaskComponent } from './task/task.component';
 
@@ -15,6 +15,7 @@ export class TasksComponent {
   tasks: Task[] = dummyTasks;
   userTasks: Task[] = [];
   isAddingTaskVisible = false;
+
   ngOnChanges() {
     this.userTasks = dummyTasks.filter((task: Task) => task.userId === this.user().id);
   }
@@ -29,5 +30,17 @@ export class TasksComponent {
 
   onCancelAddTask() {
     this.isAddingTaskVisible = false;
+  }
+
+  onAddTask(taskData: TaskData) {
+    this.isAddingTaskVisible = false;
+    this.tasks.unshift({
+      id: new Date().getTime().toString(),
+      title: taskData.title,
+      dueDate: taskData.date,
+      summary: taskData.summary,
+      userId: this.user().id
+    });
+    this.userTasks = dummyTasks.filter((task: Task) => task.userId === this.user().id);
   }
 }
