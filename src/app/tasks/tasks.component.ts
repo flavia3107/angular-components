@@ -1,5 +1,6 @@
 import { Component, input } from '@angular/core';
-import { dummyTasks, Task, TaskData } from './dummy-tasks';
+import { TasksService } from '../services/tasks-service.service';
+import { Task } from './dummy-tasks';
 import { NewTaskComponent } from './new-task/new-task.component';
 import { TaskComponent } from './task/task.component';
 
@@ -12,35 +13,20 @@ import { TaskComponent } from './task/task.component';
 })
 export class TasksComponent {
   user = input.required<any>();
-  tasks: Task[] = dummyTasks;
-  userTasks: Task[] = [];
   isAddingTaskVisible = false;
+  userTasks: Task[] = [];
 
-  ngOnChanges() {
-    this.userTasks = dummyTasks.filter((task: Task) => task.userId === this.user().id);
-  }
+  constructor(private _tasksService: TasksService) { }
 
-  updateTask(id: string) {
-    this.userTasks = this.userTasks.filter(task => task.id !== id);
+  get selectedUserTasks() {
+    return this._tasksService.getUserTasks(this.user().id);
   }
 
   onStartAddTask() {
     this.isAddingTaskVisible = true;
   }
 
-  onCancelAddTask() {
+  onCloseAddTask() {
     this.isAddingTaskVisible = false;
-  }
-
-  onAddTask(taskData: TaskData) {
-    this.isAddingTaskVisible = false;
-    this.tasks.unshift({
-      id: new Date().getTime().toString(),
-      title: taskData.title,
-      dueDate: taskData.date,
-      summary: taskData.summary,
-      userId: this.user().id
-    });
-    this.userTasks = dummyTasks.filter((task: Task) => task.userId === this.user().id);
   }
 }
