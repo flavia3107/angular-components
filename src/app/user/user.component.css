@@ -8,7 +8,7 @@ button {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.35rem 0.5rem;
+    padding: 0.5rem;
     background-color: #333c52;
     color: #b3c1d1;
     border: none;
@@ -22,7 +22,7 @@ button {
 button:hover,
 button:active,
 .active {
-    background-color: #6174a1;
+    background-color: #bbd5f4;
     color: #07151f;
 }
 
@@ -36,6 +36,6 @@ img {
 span {
     margin: 0;
     padding: 0;
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: normal;
 }
