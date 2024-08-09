@@ -6,7 +6,7 @@
     margin-bottom: 1.5rem;
     height: fit-content;
     box-sizing: border-box;
-    background-color: #343c53;
+    background-color: #f4f5f5;
 }
 
 header {
@@ -32,7 +32,7 @@ menu {
 menu button {
     font: inherit;
     cursor: pointer;
-    background-color: #d8ecff;
+    background-color: #d3ddeb;
     border-radius: 4px;
     border: none;
     padding: 0.35rem 0.8rem;

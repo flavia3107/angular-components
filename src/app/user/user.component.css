@@ -9,8 +9,7 @@ button {
     align-items: center;
     gap: 0.5rem;
     padding: 0.5rem;
-    background-color: #333c52;
-    color: #b3c1d1;
+    color: #131517;
     border: none;
     font: inherit;
     cursor: pointer;
@@ -22,8 +21,8 @@ button {
 button:hover,
 button:active,
 .active {
-    background-color: #bbd5f4;
-    color: #07151f;
+    background-color: #2f3235;
+    color: #f6f9fc;
 }
 
 img {

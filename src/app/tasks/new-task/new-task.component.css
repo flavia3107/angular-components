@@ -10,7 +10,7 @@
 dialog {
     width: 90%;
     max-width: 30rem;
-    background-color: #333c52;
+    background-color: #f4f5f5;
     border-radius: 6px;
     border: none;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
@@ -21,14 +21,14 @@ dialog {
 
 h2 {
     margin: 0;
-    color: #bbd5f4;
+    color: #131517;
 }
 
 label {
     display: block;
     font-weight: bold;
     font-size: 0.85rem;
-    color: #bbd5f4;
+    color: #131517;
 }
 
 input,
@@ -37,8 +37,8 @@ textarea {
     font: inherit;
     padding: 0.15rem 0.25rem;
     border-radius: 4px;
-    border: 1px solid #9eb3cc;
-    background-color: #b1c3d9;
+    border: 1px solid #b8b8b8;
+    background-color: #d3d3d3;
 }
 
 .actions {
@@ -58,23 +58,24 @@ button {
 }
 
 button[type="button"] {
-    color: #bbd5f4;
+    color: #131517;
 }
 
 button[type="button"]:hover,
 button[type="button"]:active {
-    color: #9eb3cc;
+    color: #929faf;
 }
 
 button[type="submit"] {
-    background-color: #d8ecff;
+    background-color: #131517;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
+    color: #ffffff;
 }
 
 button[type="submit"]:hover,
 button[type="submit"]:active {
-    background-color: #bbd5f4;
+    background-color: #2c2e30;
     box-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
 }
 
