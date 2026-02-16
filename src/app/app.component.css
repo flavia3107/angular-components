@@ -16,9 +16,11 @@ main {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex !important;
+  flex-direction: column;
   gap: 0.5rem;
   overflow: auto;
+  min-width: 16rem !important;
 }
 
 #fallback {
