@@ -33,3 +33,10 @@ body {
 ::-webkit-scrollbar-corner {
   background: transparent;
 }
+
+@media (max-width: 700px) {
+  app-root {
+    flex-direction: column;
+    overflow: auto !important;
+  }
+}
